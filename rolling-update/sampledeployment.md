@@ -1,3 +1,7 @@
+# Deployment kubernetes template file
+
+```
+----
 apiVersion: v1
 kind: Service
 metadata:
@@ -181,7 +185,7 @@ spec:
 {{ end }}
       containers:
         - name: {{ my_service_name}}
-          image: docker.goodwill.tools/goodwill-itg/questionPapers:{{ .version }}
+          image: docker.goodwill.tools/goodwill-tests/questionPapers:{{ .version }}
           securityContext:
             runAsNonRoot: true
             runAsUser: 1000
@@ -218,17 +222,17 @@ spec:
             - name: SPRING_RABBITMQ_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: itgconfig-rms-secrets
+                  name: myservice-rms-secrets
                   key: rabbit-user
             - name: SPRING_RABBITMQ_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: itgconfig-rms-secrets
+                  name: myservice-rms-secrets
                   key: rabbit-password
             - name: SPRING_RABBITMQ_VIRTUAL_HOST
               valueFrom:
                 configMapKeyRef:
-                  name: itgconfig-rms-config
+                  name: myservice-rms-config
                   key: vhost
             - name: SPRING_RABBITMQ_HOST
               value: "rabbitmq"
@@ -278,3 +282,5 @@ spec:
     STORAGE_BUCKETNAME: {{ .storage.bucketName }}
     STORAGE_STSROLEARN: {{ .storage.stsRoleArn }}
     STORAGE_ENDPOINTURL: {{ .storage.endpointUrl }}
+    
+```

@@ -29,3 +29,63 @@ Components can be broadly classified into following categories -
    - Defines the container with implicit layout like Columns .  
    - It can hold other UI Components(Elementary, Container)
 
+```
+
+"component": {
+    "data" : "#data-binding-expression",
+    "type" : "#component-type",
+    "description" : "Component Metadata",
+    "properties" : {
+        "visible": [true, false],
+        "src" : "http://foo"
+    },
+    "style": {
+        "margin": "0 0 0 0",
+        "border": "1px solid #000000",
+        "border-radius": "5",
+        "padding": "0 0 0 0",
+        "background-image": "url('')",
+        "background-color": "#RRGGBB",
+        "height": "100px",
+        "width": "200px",
+        "font-family": "Helvetica",
+        "font-size": "12px",
+        "color": "#RGB",
+        "position": "[relative]",
+        "align":"[left, right, center]",
+        "opacity": "0.0..1.0"
+    }
+}
+```
+
+Not all the properties are applicable for all the components. Eg. Row and Cell components do not have data property but they have 'components' where we can add other layout and data components. Similarly, data components do not 'components' property.
+
+Below are the examples of text component and image component. Text component contains data but image does not. Instead it has a 'src' attribute defined in 'properties' which accepts URL of the image -
+Text JSON
+```
+{
+  "type": "text",
+  "properties": {
+     "visible" : "true,
+   },
+  "style": {
+    "color": "#333"
+    "font-size": "12px"
+  }
+  "data": "Hello {{customer-name}} invoice on ${invoice-due-date}",
+}
+```
+Image JSON -
+```
+{
+  "type": "image",
+  "properties": {
+    "visible" : "true,
+    "src": "http://path-2-img"
+  },
+  "style": {
+    "height": "100px",
+    "width": "200px"
+  }
+}
+```

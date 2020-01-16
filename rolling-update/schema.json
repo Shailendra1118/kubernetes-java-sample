@@ -1,0 +1,888 @@
+{
+	"footer": {
+		"default": {
+			"components": [
+				{
+					"components": [
+						{
+							"components": [
+								{
+									"data": "Page {{Page Number}} of {{Total Pages}}",
+									"style": {
+										"color": "#707070",
+										"font-size": "6px",
+										"font-family": "Arial",
+										"text-align": "right"
+									},
+									"type": "pageNumber",
+									"properties": {
+										"visible": true
+									}
+								}
+							],
+							"style": {
+								"width": "100%"
+							},
+							"type": "cell",
+							"properties": {
+								"visible": true
+							}
+						}
+					],
+					"style": {
+						"border-top": "1pt solid #575757"
+					},
+					"type": "row",
+					"properties": {
+						"visible": true
+					}
+				}
+			],
+			"description": "Default footer on every page of pdf",
+			"style": {
+				"height": "40px"
+			},
+			"type": "footer",
+			"properties": {}
+		}
+	},
+	"header": {
+		"default": {
+			"components": [
+				{
+					"components": [
+						{
+							"components": [
+								{
+									"style": {
+										"width": "100%",
+										"text-align": "left"
+									},
+									"type": "image",
+									"properties": {
+										"visible": true,
+										"src": "{{Invoice Logo}}"
+									}
+								}
+							],
+							"style": {
+								"width": "20%"
+							},
+							"type": "cell",
+							"properties": {
+								"visible": true
+							}
+						},
+						{
+							"components": [
+								{
+									"data": "INVOICE {{Invoice Number}}",
+									"style": {
+										"margin-left": "50px",
+										"color": "#707070",
+										"font-weight": "bold",
+										"font-size": "9px"
+									},
+									"type": "text",
+									"properties": {
+										"visible": true
+									}
+								}
+							],
+							"style": {
+								"width": "60%"
+							},
+							"type": "cell",
+							"properties": {
+								"visible": true
+							}
+						},
+						{
+							"components": [
+								{
+									"data": "Page {{Page Number}} of {{Total Pages}}",
+									"style": {
+										"color": "#707070",
+										"font-size": "6px",
+										"font-family": "Arial",
+										"text-align": "right"
+									},
+									"type": "pageNumber",
+									"properties": {
+										"visible": true
+									}
+								}
+							],
+							"style": {
+								"width": "20%"
+							},
+							"type": "cell",
+							"properties": {
+								"visible": true
+							}
+						}
+					],
+					"style": {
+						"border-bottom": "1pt solid #575757"
+					},
+					"type": "row",
+					"properties": {
+						"visible": true
+					}
+				}
+			],
+			"description": "Default header on every page",
+			"style": {
+				"height": "40px"
+			},
+			"type": "header",
+			"properties": {}
+		},
+		"first": null
+	},
+	"page": {
+		"pageStyle": {
+			"pageMargin": {
+				"top": "20px",
+				"left": "45px",
+				"bottom": "45px",
+				"right": "45px"
+			}
+		},
+		"globalStyles": {
+			"paragraph": {
+				"color": "#474747",
+				"font-size": "8pt",
+				"font-family": "Arial",
+				"text-align": "left"
+			},
+			"tableBody": {
+				"color": "#707070",
+				"font-weight": "normal",
+				"font-size": "8pt",
+				"font-family": "Arial",
+				"text-align": "left"
+			},
+			"link": {
+				"color": "#474747",
+				"text-decoration": "none"
+			},
+			"title": {
+				"color": "#474747",
+				"font-weight": "normal",
+				"font-size": "8pt",
+				"font-family": "Arial",
+				"text-align": "left"
+			},
+			"tableHeader": {
+				"color": "#707070",
+				"font-weight": "bold",
+				"font-size": "8pt",
+				"font-family": "Arial",
+				"text-align": "left"
+			}
+		},
+		"elementStyles": [],
+		"properties": {
+			"displayHeaderOnFirstPage": false,
+			"format": "A4",
+			"width": "8.5in",
+			"height": "11in",
+			"displayFooterOnFirstPage": true
+		}
+	},
+	"body": {
+		"components": [
+			{
+				"components": [
+					{
+						"thickness": "30px",
+						"type": "verticalSpacer",
+						"properties": {
+							"visible": true
+						}
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"description": "Logo",
+										"style": {
+											"width": "73%"
+										},
+										"type": "image",
+										"properties": {
+											"visible": true,
+											"src": "{{Invoice Logo}}"
+										}
+									},
+									{
+										"thickness": "30px",
+										"type": "verticalSpacer",
+										"properties": {
+											"visible": true
+										}
+									},
+									{
+										"components": [
+											{
+												"components": [
+													{
+														"data": "BILL TO",
+														"description": "Label",
+														"style": {
+															"color": "#707070",
+															"font-weight": "bold"
+														},
+														"type": "text",
+														"properties": {
+															"visible": true
+														}
+													},
+													{
+														"data": "**{{First Name}} {{Last Name}}**  \n{{Company Name}}  \n{{Street 1}}  \n{{Street 2}}  \n{{City}} {{State}} {{Zip Code}}  \n{{Email}}",
+														"description": "Customer Address",
+														"style": {
+															"line-height": "15pt"
+														},
+														"type": "markdownText",
+														"properties": {
+															"visible": true,
+															"selected": false
+														}
+													}
+												],
+												"description": "",
+												"style": {
+													"width": "50%"
+												},
+												"type": "cell",
+												"properties": {
+													"visible": true,
+													"selected": false
+												}
+											},
+											{
+												"components": [
+													{
+														"data": "PAYABLE TO",
+														"description": "Label",
+														"style": {
+															"color": "#707070",
+															"font-weight": "bold"
+														},
+														"type": "text",
+														"properties": {
+															"visible": true,
+															"selected": false
+														}
+													},
+													{
+														"data": "{{Seller}}",
+														"description": "Seller Details",
+														"style": {
+															"line-height": "15pt"
+														},
+														"type": "markdownText",
+														"properties": {
+															"visible": true,
+															"selected": false
+														}
+													}
+												],
+												"description": "",
+												"style": {
+													"width": "50%"
+												},
+												"type": "cell",
+												"properties": {
+													"visible": true
+												}
+											}
+										],
+										"style": {},
+										"type": "row",
+										"properties": {
+											"visible": true
+										}
+									}
+								],
+								"description": "",
+								"style": {
+									"width": "70%"
+								},
+								"type": "cell",
+								"properties": {
+									"visible": true
+								}
+							},
+							{
+								"components": [
+									{
+										"data": "INVOICE  \n**{{Invoice Number}}**\n\nAMOUNT DUE  \n**{{Balance Due}}**\n\nINVOICE DATE  \n**{{Date}}**\n\nDUE DATE  \n**{{Invoice Due Date}}**",
+										"description": "Invoice Summary",
+										"style": {
+											"background-color": "#EAEAEA",
+											"padding-top": "15pt",
+											"padding-bottom": "15pt",
+											"line-height": "15pt",
+											"text-align": "right",
+											"padding-right": "15pt"
+										},
+										"isConditional": true,
+										"type": "markdownText",
+										"properties": {
+											"visible": true,
+											"selected": false
+										},
+										"conditionalExpr": {
+											"effect": {
+												"true": {
+													"data": "CREDIT NOTE  \n**{{Invoice Number}}**\n\nAMOUNT DUE  \n**{{Balance Due}}**\n\nCREDIT NOTE DATE  \n**{{Date}}**\n\nDUE DATE  \n**{{Invoice Due Date}}**"
+												},
+												"false": {
+													"data": "INVOICE  \n**{{Invoice Number}}**\n\nAMOUNT DUE  \n**{{Balance Due}}**\n\nINVOICE DATE  \n**{{Date}}**\n\nDUE DATE  \n**{{Invoice Due Date}}**"
+												}
+											},
+											"expr": "{{Credit Note}}"
+										}
+									}
+								],
+								"description": "",
+								"style": {
+									"width": "30%"
+								},
+								"type": "cell",
+								"properties": {
+									"visible": true,
+									"selected": false
+								}
+							}
+						],
+						"style": {},
+						"type": "row",
+						"properties": {
+							"visible": true
+						}
+					},
+					{
+						"thickness": "30px",
+						"type": "verticalSpacer",
+						"properties": {
+							"visible": true,
+							"selected": false
+						}
+					},
+					{
+						"data": "Invoice",
+						"description": "",
+						"style": {
+							"padding-top": "5pt",
+							"color": "#ffffff",
+							"padding-left": "0pt",
+							"padding-bottom": "5pt",
+							"font-size": "16pt",
+							"border-color": "#474747",
+							"background-color": "#1aeb43",
+							"border-radius": "0pt",
+							"width": "100%",
+							"border-width": "3pt",
+							"border-style": "none",
+							"padding-right": "0pt",
+							"text-align": "center"
+						},
+						"isConditional": true,
+						"type": "text",
+						"properties": {
+							"visible": true,
+							"position": "left",
+							"selected": false
+						},
+						"conditionalExpr": {
+							"effect": {
+								"true": {
+									"data": "Credit Note"
+								},
+								"false": {
+									"data": "Invoice"
+								}
+							},
+							"expr": true
+						}
+					},
+					{
+						"customSortingCriteria": [
+							{
+								"key": "{{Cost Type}}",
+								"order": [
+									"{{Product Type - Recurring Flat}}",
+									"{{Product Type - Recurring Per Unit}}",
+									"{{Product Type - One Time Flat}}",
+									"{{Product Type - One Time Per Unit}}",
+									"{{Product Type - Setup Fee}}",
+									"{{Product Type - Setup Fee Per Unit}}",
+									"{{Product Type - Metered Usage}}",
+									"{{Product Type - Contract Fee}}",
+									"{{Product Type - Discount Flat}}",
+									"{{Product Type - Discount Per Unit}}",
+									"{{Product Type - Additional Fee}}",
+									"{{Product Type - Termination Fee}}",
+									"{{Product Type - Add-On}}"
+								]
+							},
+							{
+								"key": "{{IS CREDIT}}",
+								"order": [
+									"{{Product Type - Non-Credit}}",
+									"{{Product Type - Credit}}"
+								]
+							}
+						],
+						"groupingCriteria": [
+							"{{Subscription ID}}",
+							"{{Product ID}}",
+							"{{Edition ID}}"
+						],
+						"data": "{{Invoice Lines}}",
+						"sortingCriteria": null,
+						"description": "Invoice table",
+						"header": {
+							"columns": [
+								{
+									"description": "Column 1 header",
+									"style": {
+										"width": "25%"
+									},
+									"label": "Product",
+									"properties": {
+										"visible": true
+									}
+								},
+								{
+									"description": "Column 2 header",
+									"style": {
+										"width": "20%"
+									},
+									"label": "Description",
+									"properties": {
+										"visible": true
+									}
+								},
+								{
+									"description": "Column 3 header",
+									"style": {
+										"width": "25%"
+									},
+									"label": "Billing Period",
+									"properties": {
+										"visible": true
+									}
+								},
+								{
+									"description": "Column 4 header",
+									"style": {
+										"width": "12.5%"
+									},
+									"label": "Unit Price",
+									"properties": {
+										"visible": true
+									}
+								},
+								{
+									"description": "Column 5 header",
+									"style": {
+										"width": "12.5%"
+									},
+									"label": "Quantity",
+									"properties": {
+										"visible": true
+									}
+								},
+								{
+									"description": "Column 6 header",
+									"style": {
+										"width": "10%"
+									},
+									"label": "Total",
+									"properties": {
+										"visible": true
+									}
+								}
+							],
+							"style": {
+								"font-size": "8pt"
+							},
+							"properties": {
+								"visible": true
+							}
+						},
+						"style": {
+							"color": "#707070",
+							"font-family": "Arial",
+							"border-collapse": "collapse"
+						},
+						"type": "table",
+						"body": {
+							"columns": [
+								{
+									"data": "**{{Product Name}}**  \n{{Edition Name}}",
+									"style": {
+										"line-height": "15pt",
+										"padding-right": "12pt"
+									},
+									"type": "markdownText",
+									"properties": {
+										"visible": true,
+										"isGrouped": true
+									}
+								},
+								{
+									"data": "{{Product Description}}",
+									"style": {},
+									"type": "text",
+									"properties": {
+										"visible": true,
+										"isGrouped": false
+									}
+								},
+								{
+									"data": "{{Billing Period}}",
+									"style": {},
+									"type": "text",
+									"properties": {
+										"visible": true,
+										"isGrouped": false
+									}
+								},
+								{
+									"data": "{{Price Per Unit}}",
+									"style": {},
+									"type": "text",
+									"properties": {
+										"visible": true,
+										"isGrouped": false
+									}
+								},
+								{
+									"data": "{{Quantity}}",
+									"style": {},
+									"type": "text",
+									"properties": {
+										"visible": true,
+										"isGrouped": false
+									}
+								},
+								{
+									"data": "{{Line Total}}",
+									"style": {},
+									"type": "text",
+									"properties": {
+										"visible": true,
+										"isGrouped": false
+									}
+								}
+							],
+							"style": {
+								"vertical-align": "text-top",
+								"border-bottom": "1pt solid #EAEAEA"
+							},
+							"properties": {
+								"visible": true
+							}
+						},
+						"properties": {
+							"visible": true
+						}
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"description": "Subtotal",
+										"style": {},
+										"label": {
+											"data": "Subtotal",
+											"style": {
+												"width": "50%",
+												"text-align": "left"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										},
+										"type": "field",
+										"properties": {
+											"orientation": "horizontal",
+											"visible": true
+										},
+										"content": {
+											"data": "{{Subtotal}}",
+											"style": {
+												"width": "50%",
+												"text-align": "right"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										}
+									},
+									{
+										"customSortingCriteria": [],
+										"groupingCriteria": [],
+										"data": "{{Tax Summary}}",
+										"sortingCriteria": null,
+										"description": "Tax Table",
+										"header": {
+											"columns": [],
+											"style": {},
+											"properties": {
+												"visible": true
+											}
+										},
+										"style": {
+											"color": "#575757",
+											"font-family": "Arial",
+											"border-bottom": "1pt solid #575757"
+										},
+										"type": "table",
+										"body": {
+											"columns": [
+												{
+													"data": "{{Tax Type}}",
+													"style": {
+														"text-align": "left"
+													},
+													"type": "text",
+													"properties": {
+														"visible": true
+													}
+												},
+												{
+													"data": "{{Tax Amount}}",
+													"style": {
+														"text-align": "right"
+													},
+													"type": "text",
+													"properties": {
+														"visible": true
+													}
+												}
+											],
+											"style": {
+												"padding-bottom": "1em",
+												"font-size": "8pt"
+											},
+											"properties": {
+												"visible": true
+											}
+										},
+										"properties": {
+											"visible": true
+										}
+									},
+									{
+										"style": {
+											"border-bottom": "1pt solid #575757"
+										},
+										"label": {
+											"data": "Total",
+											"style": {
+												"width": "50%",
+												"text-align": "left"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										},
+										"type": "field",
+										"properties": {
+											"orientation": "horizontal",
+											"visible": true
+										},
+										"content": {
+											"data": "{{Total}}",
+											"style": {
+												"width": "50%",
+												"text-align": "right"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										}
+									},
+									{
+										"style": {
+											"border-bottom": "1pt solid #575757"
+										},
+										"label": {
+											"data": "Carried Balance",
+											"style": {
+												"width": "50%",
+												"text-align": "left"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										},
+										"type": "field",
+										"properties": {
+											"orientation": "horizontal",
+											"visible": true
+										},
+										"content": {
+											"data": "{{Carried Balance}}",
+											"style": {
+												"width": "50%",
+												"text-align": "right"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										}
+									},
+									{
+										"style": {
+											"border-bottom": "1pt solid #575757"
+										},
+										"label": {
+											"data": "Amount Paid",
+											"style": {
+												"width": "50%",
+												"text-align": "left"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										},
+										"type": "field",
+										"properties": {
+											"orientation": "horizontal",
+											"visible": true
+										},
+										"content": {
+											"data": "{{Amount Paid}}",
+											"style": {
+												"width": "50%",
+												"text-align": "right"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										}
+									},
+									{
+										"style": {
+											"color": "#474747",
+											"font-weight": "bold"
+										},
+										"label": {
+											"data": "Amount due",
+											"style": {
+												"color": "#474747",
+												"font-weight": "bold",
+												"width": "50%",
+												"font-size": "12pt",
+												"text-align": "left"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										},
+										"type": "field",
+										"properties": {
+											"orientation": "horizontal",
+											"visible": true
+										},
+										"content": {
+											"data": "{{Balance Due}}",
+											"style": {
+												"color": "#474747",
+												"font-weight": "bold",
+												"width": "50%",
+												"font-size": "12pt",
+												"text-align": "right"
+											},
+											"type": "text",
+											"properties": {
+												"visible": true
+											}
+										}
+									}
+								],
+								"description": "Tax summary",
+								"style": {
+									"color": "#575757",
+									"width": "40%"
+								},
+								"type": "cell",
+								"properties": {
+									"visible": true,
+									"position": "right"
+								}
+							}
+						],
+						"style": {
+							"page-break-inside": "avoid"
+						},
+						"type": "row",
+						"properties": {
+							"visible": true
+						}
+					},
+					{
+						"thickness": "30pt",
+						"type": "verticalSpacer",
+						"properties": {
+							"visible": true
+						}
+					},
+					{
+						"data": "{{Memo}}",
+						"description": "Invoice Memo",
+						"style": {
+							"border-radius": "3pt",
+							"padding-top": "0pt",
+							"color": "#575757",
+							"page-break-inside": "avoid",
+							"padding-left": "10pt",
+							"width": "100%",
+							"padding-bottom": "0pt",
+							"border-width": "1pt",
+							"border-color": "#707070",
+							"line-height": "15pt",
+							"border-style": "solid",
+							"padding-right": "10pt"
+						},
+						"type": "markdownText",
+						"properties": {
+							"visible": true
+						}
+					}
+				],
+				"style": {
+					"width": "100%"
+				},
+				"type": "cell",
+				"properties": {
+					"visible": true
+				}
+			}
+		],
+		"style": {},
+		"type": "row",
+		"properties": {
+			"visible": true
+		}
+	}
+}
